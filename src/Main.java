@@ -5,7 +5,8 @@
 public class Main {
 
     public static void main(String[] args) {
-        exampleBinTree();
+        //exampleBinTree();
+        exampleSet();
     }
 
     static void exampleBinTree() {
@@ -39,8 +40,20 @@ public class Main {
         tree.traversePreOrder(tree.root);
         System.out.println();
         tree.traversePostOrder(tree.root);
+    }
 
+    static void exampleSet() {
+        mySet set = new mySet(10);
+        set.add(1);
+        set.add(2);
+        set.add(3);
+        set.add(4);
+        set.add(5);
 
+        System.out.println(set);
+        System.out.println(set.contains(3));
+        System.out.println(set.contains(6));
+        System.out.println(set.contains(0));
     }
 }
 
