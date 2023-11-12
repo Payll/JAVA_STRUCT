@@ -5,8 +5,9 @@
 public class Main {
 
     public static void main(String[] args) {
-        //exampleBinTree();
-        exampleSet();
+        // exampleBinTree();
+        // exampleSet();
+        exampleLinkedList();
     }
 
     static void exampleBinTree() {
@@ -54,6 +55,16 @@ public class Main {
         System.out.println(set.contains(3));
         System.out.println(set.contains(6));
         System.out.println(set.contains(0));
+    }
+
+    static void exampleLinkedList() {
+        myLinkedList list = new myLinkedList();
+
+        list.pushFront(1);
+        list.pushFront(2);
+        list.pushFront(3);
+
+        System.out.println(list);
     }
 }
 
