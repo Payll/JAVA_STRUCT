@@ -50,25 +50,35 @@ public class myBinTree {
     }
 
     public void delete(int data) {
-        root = deleteRecursive(root, data);
+        root = elagantDeleteRecursive(root, data);
     }
 
-    private Node deleteRecursive(Node current, int data) {
+    private Node elagantDeleteRecursive(Node current, int data) {
         if (current == null) {
             return null;
         }
 
-        if (data == current.data) {
-
-        }
-
-        if (data < current.data) {
-            current.left = deleteRecursive(current.left, data);
+        if (data > current.data) {
+            current.right = elagantDeleteRecursive(current.right, data);
             return current;
+        } else if (data < current.data) {
+            current.left = elagantDeleteRecursive(current.left, data);
+            return current;
+        } else {
+            if (current.left == null) {
+                return current.right;
+            } else if (current.right == null) {
+                return current.left;
+            } else {
+                current.data = findSmallestValue(current.right);
+                current.right = elagantDeleteRecursive(current.right, current.data);
+                return current;
+            }
         }
+    }
 
-        current.right = deleteRecursive(current.right, data);
-        return current;
+    private int findSmallestValue(Node root) {
+        return root.left == null ? root.data : findSmallestValue(root.left);
     }
 
     public void traverseInOrder(Node node) {
