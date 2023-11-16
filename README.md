@@ -5,13 +5,13 @@ This repository contains the implementation of some data structures in Java.
 
 - [X] Queue
 - [X] Stack
-- [X] Linked List
-- [X] Set
-- [ ] Binary Search Tree
 - [ ] Deque
+- [X] Set
+- [X] Linked List
+- [ ] Hash table
+- [ ] Hash map
+- [ ] Linked Hash Map
+- [ ] Binary Search Tree
+- [ ] Trie
 - [ ] HEAP
 - [ ] Graph
-- [ ] Hash map
-- [ ] Hash table
-- [ ] Linked Hash Map
-- [ ] Trie
